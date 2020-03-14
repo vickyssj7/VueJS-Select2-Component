@@ -3,24 +3,22 @@ Simple VueJS select2 component
 
 # Requirement
 
-    jQuery
-    
-    Select2
-    
-    VueJS
+- [vue(>= 2.0-release)](https://github.com/vuejs/vue)
+- [jQuery](https://jquery.com/)
+- [select2](https://select2.github.io/)
 
 
 # Usage
 Download the select2 vue component and place it in your VusJS project and import the component
-
-    import select2 from '/{path-to-select2-component}/select2'
-    
+````javascript
+import select2 from '/{path-to-select2-component}/select2'
+````    
 Add select2 component in your template
-    
-    <select2 :placeholder="My Select2 Input" :options="options" v-model="selection" :name="select2" class="form-control"></select2>
-    
+````html    
+<select2 :placeholder="My Select2 Input" :options="options" v-model="selection" :name="select2" class="form-control"></select2>
+````    
 
-### Accepted component properties
+### Components properties
 
-   #### Options
+ - `options`
    Accepts select2 options: `[{id: 1, text: "Value 1"}, {id: 2, text: "Value 2"}]` or `[{text: "Value 1"}, {text: "Value 2"}]`
