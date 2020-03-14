@@ -3,7 +3,7 @@ Simple VueJS select2 component
 
 # Requirement
 
-- [vue(>= 2.0-release)](https://github.com/vuejs/vue)
+- [vue(>= 2.0)](https://github.com/vuejs/vue)
 - [jQuery](https://jquery.com/)
 - [select2](https://select2.github.io/)
 
