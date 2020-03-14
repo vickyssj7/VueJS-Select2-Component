@@ -20,5 +20,23 @@ Add select2 component in your template
 
 ### Components properties
 
- - `options`
-   Accepts select2 options: `[{id: 1, text: "Value 1"}, {id: 2, text: "Value 2"}]` or `[{text: "Value 1"}, {text: "Value 2"}]`
+ - `options`:
+   - Accepts `Array`
+   - Accepts select2 options: `[{id: 1, text: "Value 1"}, {id: 2, text: "Value 2"}]` or `[{text: "Value 1"}, {text: "Value 2"}]`
+ - `placeholder`:
+   - Accepts `String`
+   - Placeholder attribute for your select2 input
+ - `multiple`:
+   - Accepts: `Boolean`
+   - Attribute to Enable or disable select2 multiple options, default is `false`
+ - `v-model`:
+   - Accepts `String` or `Number` or `Array`
+   - Input binding for your select2 component
+   - `selection: ''` - `String` or `Number` if multiple is set to false
+   - `selection: []` - `Array` if multiple is set to true
+ - `name`:
+    - Accepts `String`
+    - name attribute for your select input
+ - `class`:
+    - Accepts `String`
+    - css class attribute for your select input
