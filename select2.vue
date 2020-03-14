@@ -117,7 +117,6 @@ export default {
 			}
 			vm.$nextTick(function() {
 				vm.$emit("input", option);
-				console.log(option);
 			})
 		}
 	},
