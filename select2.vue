@@ -1,3 +1,8 @@
+<!--
+Author: Rajender Kumar
+Description: Simple JS select2 component to use in vuejs
+Version: 1.0
+-->
 <template>
 	<select :placeholder="placeholder" :multiple="multiple" :name="name">
 		<option v-if="!multiple" value ="-1" disabled selected>{{placeholder}}</option>
@@ -6,6 +11,9 @@
 <script>
 let option = [];
 export default {
+	/**
+	 * Lists of props supported by this components
+	 */
 	props: {
 		placeholder: {
 			type: String,
@@ -32,12 +40,17 @@ export default {
 			type: String,
 			default: ''
 		},
+		language: {
+			type: String,
+			default: 'en-US'
+		},
 		defaultSettings: {
 			type: Object,
 			default: function() {
 				return {
 					placeholder: this.placeholder,
-					data: this.options
+					data: this.options,
+					language: this.language
 				}
 			}
 		},
@@ -69,6 +82,7 @@ export default {
 			disabled: this.disabled,
 			theme: this.theme,
 			data: this.options,
+			language: this.language,
 			...this.settings
 		})
 		.on("select2:select", (e) => vm.selectedOption(e))
@@ -76,6 +90,10 @@ export default {
 		.on("change", (e) => vm.selectionChange(e, vm));
 	},
 	methods: {
+		/**
+		 * Function to be used by this component to filter data
+		 * selectedOption, unselectedOption, selectionChange
+		 */
 		selectedOption(e) {
 			if(this.multiple) {
 				option.push(e.params.data.id);
