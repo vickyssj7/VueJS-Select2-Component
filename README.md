@@ -40,3 +40,9 @@ Add select2 component in your template
  - `class`:
     - Accepts `String`
     - css class attribute for your select input
+ - `disabled`:
+	   - Accepts `Boolean`
+	   - prop to disable select2 input
+ - `theme`:
+	   - Accepts `String`
+	   - prop to add theme for select2
