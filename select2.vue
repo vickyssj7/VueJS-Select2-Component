@@ -74,8 +74,7 @@ export default {
 		}
 	},
 	mounted: function() {
-		var elm = $(this.$el), vm = this;
-		elm.select2({
+		var elm = $(this.$el), vm = this, args = {
 			name: this.name,
 			placeholder: this.placeholder,
 			multiple: this.multiple,
@@ -84,7 +83,8 @@ export default {
 			data: this.options,
 			language: this.language,
 			...this.settings
-		})
+		};
+		elm.select2(args)
 		.on("select2:select", (e) => vm.selectedOption(e))
 		.on("select2:unselect", (e) => vm.unselectedOption(e))
 		.on("change", (e) => vm.selectionChange(e, vm));
@@ -117,6 +117,7 @@ export default {
 			}
 			vm.$nextTick(function() {
 				vm.$emit("input", option);
+				console.log(option);
 			})
 		}
 	},
