@@ -1,4 +1,4 @@
-Copyright (C) 2017-2018 {company name or your name} <{email}>
+Copyright (C) 2020 Rajender Kumar <rajenderkumar1141990@gmail.com>
 
 This file is part of my VueJS project.
 
