@@ -103,7 +103,6 @@ export default {
 		},
 		unselectedOption(e) {
 			if(this.multiple) {
-				option.push(e.params.data.id);
 				delete option[option.indexOf(e.params.data.id)];
 				option = option.filter(val => val > 0);
 			} else {
@@ -117,7 +116,6 @@ export default {
 			}
 			vm.$nextTick(function() {
 				vm.$emit("input", option);
-				console.log(option);
 			})
 		}
 	},
